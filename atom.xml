@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Wyl秦吉的博客]]></title>
+  <subtitle><![CDATA[技术，成长！]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://www.wylyeak.org/"/>
+  <updated>2014-09-21T15:05:15.543Z</updated>
+  <id>http://www.wylyeak.org/</id>
+  
+  <author>
+    <name><![CDATA[Wyl秦吉]]></name>
+    <email><![CDATA[wangyulie@gmail.com]]></email>
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Tar 压缩 解压缩 打包 命令]]></title>
+    <link href="http://www.wylyeak.org/2012/07/30/shell-tar/"/>
+    <id>http://www.wylyeak.org/2012/07/30/shell-tar/</id>
+    <published>2012-07-29T16:27:39.000Z</published>
+    <updated>2014-09-21T14:57:57.000Z</updated>
+    <content type="html"><![CDATA[<p>tar 是linux里面经常需要使用的命令，归档，压缩，解压缩的功能，其参数如下<br>tar [-cxtzjvfpPN] 文件与目录</p>
+<p>参数说明：<br><a id="more"></a></p>
+<ul>
+<li>-c :建立压缩文件的参数命令（creat的意思）</li>
+<li>-x :解压缩文件的参数命令</li>
+<li>-t :查看tar包里文件的命令特别注意，在使用参数时,c/x/t只能有一个，不能同时存在因为不可能同时压缩与解压缩。</li>
+<li>-z :是否同时具有gzip的属性，即是否需要用gzip压缩</li>
+<li>-j :是否同时具有bz2的属性，即是否需要用bzip2压缩（记不住的就是它）</li>
+<li>-v :压缩过程中显示文件，这个常用，呵基本上我现在每次解压都会看一下里面的文件</li>
+<li>-f :使用文件名，之后立即加文件名，不能再加别的参数</li>
+<li>-p :使用原文件的原来属性（属性不会根据用户而变），这个从来没用过。。</li>
+<li>-P :可以使用绝对路径来压缩</li>
+<li>-N :比后面接的日期（yyyy/mm/dd)还要新的才会被打包进新建的文件中</li>
+<li>–exclude FILE :在压缩的过程中，不要将FILE打包</li>
+</ul>
+<p>举个栗子:</p>
+<p>压缩成gzip文件(启用gzip，建立，查看文件，使用文件名)：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zcvf <span class="keyword">file</span>.tar.gz <span class="keyword">file</span></div></pre></td></tr></table></figure>
+
+<p>将gzip文件解压(启用gzip，解压缩，查看文件，使用文件名)：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zxvf <span class="keyword">file</span>.tar.gz</div></pre></td></tr></table></figure>
+
+<p>压缩为bz2文件(bz2，建立，查看文件，指定文件名)：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -jcvf <span class="keyword">file</span>.tar.bz2 <span class="keyword">file</span></div></pre></td></tr></table></figure>
+
+<p>将bz2文件解压(bz2，解压缩，查看文件，指定文件名)：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -jxvf <span class="keyword">file</span>.tar.bz2</div></pre></td></tr></table></figure>
+
+<p>如果不想执行压缩只需要把z或者j这个参数去掉就行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tar -cvf <span class="keyword">file</span>.tar <span class="keyword">shell</span></div><div class="line">tar -xvf <span class="keyword">file</span>.tar</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>tar 是linux里面经常需要使用的命令，归档，压缩，解压缩的功能，其参数如下<br>tar [-cxtzjvfpPN] 文件与目录</p>
+<p>参数说明：<br>]]>
+    
+    </summary>
+    
+      <category term="tar" scheme="http://www.wylyeak.org/tags/tar/"/>
+    
+      <category term="压缩" scheme="http://www.wylyeak.org/tags/%E5%8E%8B%E7%BC%A9/"/>
+    
+      <category term="解压缩" scheme="http://www.wylyeak.org/tags/%E8%A7%A3%E5%8E%8B%E7%BC%A9/"/>
+    
+      <category term="打包" scheme="http://www.wylyeak.org/tags/%E6%89%93%E5%8C%85/"/>
+    
+      <category term="命令" scheme="http://www.wylyeak.org/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+      <category term="shell" scheme="http://www.wylyeak.org/tags/shell/"/>
+    
+      <category term="linux" scheme="http://www.wylyeak.org/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Java Web中 Url中传递中文参数乱码的处理]]></title>
+    <link href="http://www.wylyeak.org/2011/12/04/garbled-in-javaweb/"/>
+    <id>http://www.wylyeak.org/2011/12/04/garbled-in-javaweb/</id>
+    <published>2011-12-04T06:06:51.000Z</published>
+    <updated>2014-09-21T14:54:06.000Z</updated>
+    <content type="html"><![CDATA[<p>在使用tomcat做容器的时候,tomcat默认的字符集是iso-8859-1,所以在使用的时候会造成中文的乱码的问题;</p>
+<p>一般的POST请求,通过struts 或者 过滤器 配置下 就能解决.</p>
+<p>超链接中如果传递参数为中文,就会出现乱码的情况,所以采用以下方法可以解决之:</p>
+<a id="more"></a>
+
+<p>网上的一般方法为:</p>
+<ol>
+<li>修改tomcat默认字符集(不推荐,一般托管的服务器是没法接触到tomcat文件的)</li>
+<li>在中文连接请求之前js对中文执行encodeURI或者encodeURIComponent方法</li>
+<li>编码重组</li>
+</ol>
+<p>页面端直接输出中文的链接</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"sevlet?test=中文"</span>&gt;</span>test<span class="tag">&lt;/<span class="title">a</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p>页面中该是怎样就怎样<br>在后台对字符编码测试,如果是iso-8859-1则进行编码重组.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//如果字符串是采用iso-889-1编码的话,则下个判断会返回true</span></div><div class="line"><span class="keyword">if</span>(Charset.forName(<span class="string">"ISO-8859-1"</span>).newEncoder().canEncode(key)){</div><div class="line">   <span class="keyword">try</span> {</div><div class="line">       key = <span class="keyword">new</span> String(key.getBytes(<span class="string">"ISO-8859-1"</span>),<span class="string">"gbk"</span>);</div><div class="line">   } <span class="keyword">catch</span> (UnsupportedEncodingException e) {</div><div class="line">       e.printStackTrace();</div><div class="line">   }</div><div class="line">}</div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在使用tomcat做容器的时候,tomcat默认的字符集是iso-8859-1,所以在使用的时候会造成中文的乱码的问题;</p>
+<p>一般的POST请求,通过struts 或者 过滤器 配置下 就能解决.</p>
+<p>超链接中如果传递参数为中文,就会出现乱码的情况,所以采用以下方法可以解决之:</p>
+]]>
+    
+    </summary>
+    
+      <category term="javaweb" scheme="http://www.wylyeak.org/tags/javaweb/"/>
+    
+      <category term="url" scheme="http://www.wylyeak.org/tags/url/"/>
+    
+      <category term="乱码" scheme="http://www.wylyeak.org/tags/%E4%B9%B1%E7%A0%81/"/>
+    
+      <category term="超链接" scheme="http://www.wylyeak.org/tags/%E8%B6%85%E9%93%BE%E6%8E%A5/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tar 压缩 解压缩 打包 命令 | Wyl秦吉的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="tar 是linux里面经常需要使用的命令，归档，压缩，解压缩的功能，其参数如下tar [-cxtzjvfpPN] 文件与目录
+参数说明：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tar 压缩 解压缩 打包 命令">
+<meta property="og:url" content="http://www.wylyeak.org/2012/07/30/shell-tar/">
+<meta property="og:site_name" content="Wyl秦吉的博客">
+<meta property="og:description" content="tar 是linux里面经常需要使用的命令，归档，压缩，解压缩的功能，其参数如下tar [-cxtzjvfpPN] 文件与目录
+参数说明：">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tar 压缩 解压缩 打包 命令">
+<meta name="twitter:description" content="tar 是linux里面经常需要使用的命令，归档，压缩，解压缩的功能，其参数如下tar [-cxtzjvfpPN] 文件与目录
+参数说明：">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Wyl秦吉的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="../../../../css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="https://avatars2.githubusercontent.com/u/1926058?v=2&amp;s=460">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Wyl秦吉</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">技术，成长！</p>
+		
+
+		
+			<div class="onoffswitch">
+			    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+			    <label class="onoffswitch-label" for="myonoffswitch">
+			        <span class="onoffswitch-inner"></span>
+			        <span class="onoffswitch-switch"></span>
+			    </label>
+			</div>
+		
+
+		<div class="switch-area">
+			<section class="first-part">
+				<nav class="header-menu">
+					<ul>
+					
+						<li><a href="../../../..">主页</a></li>
+			        
+						<li><a href="../../../../archives">所有文章</a></li>
+			        
+					</ul>
+				</nav>
+				<nav class="header-nav">
+					<div class="social">
+						
+							<a class="github" target="_blank" href="https://github.com/wylyeak" title="github">github</a>
+				        
+							<a class="weibo" target="_blank" href="http://weibo.com/wylhelp" title="weibo">weibo</a>
+				        
+							<a class="rss" target="_blank" href="http://feed.feedsky.com/wylyeak" title="rss">rss</a>
+				        
+					</div>
+				</nav>
+			</section>
+			
+			
+			<section class="second-part">
+				<div class="widget tagcloud">
+					<a href="../../../../tags/blog" style="font-size: 10.00px;">blog</a><a href="../../../../tags/hexo" style="font-size: 10.00px;">hexo</a><a href="../../../../tags/javaweb" style="font-size: 20.00px;">javaweb</a><a href="../../../../tags/linux" style="font-size: 20.00px;">linux</a><a href="../../../../tags/shell" style="font-size: 20.00px;">shell</a><a href="../../../../tags/tar" style="font-size: 20.00px;">tar</a><a href="../../../../tags/url" style="font-size: 20.00px;">url</a><a href="../../../../tags/乱码" style="font-size: 20.00px;">乱码</a><a href="../../../../tags/压缩" style="font-size: 20.00px;">压缩</a><a href="../../../../tags/命令" style="font-size: 20.00px;">命令</a><a href="../../../../tags/打包" style="font-size: 20.00px;">打包</a><a href="../../../../tags/解压缩" style="font-size: 20.00px;">解压缩</a><a href="../../../../tags/超链接" style="font-size: 20.00px;">超链接</a>
+				</div>
+			</section>
+			
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay"></div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="https://avatars2.githubusercontent.com/u/1926058?v=2&amp;s=460">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">Wyl秦吉</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">技术，成长！</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="../../../..">主页</a></li>
+		        
+					<li><a href="../../../../archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/wylyeak" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/wylhelp" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="http://feed.feedsky.com/wylyeak" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-shell-tar" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="" class="article-date">
+  	<time datetime="2012-07-29T16:27:39.000Z" itemprop="datePublished">7月 30 2012</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/linux">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/shell">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/tar">tar</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/压缩">压缩</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/命令">命令</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/打包">打包</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/解压缩">解压缩</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Tar 压缩 解压缩 打包 命令
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>tar 是linux里面经常需要使用的命令，归档，压缩，解压缩的功能，其参数如下<br>tar [-cxtzjvfpPN] 文件与目录</p>
+<p>参数说明：<br><a id="more"></a></p>
+<ul>
+<li>-c :建立压缩文件的参数命令（creat的意思）</li>
+<li>-x :解压缩文件的参数命令</li>
+<li>-t :查看tar包里文件的命令特别注意，在使用参数时,c/x/t只能有一个，不能同时存在因为不可能同时压缩与解压缩。</li>
+<li>-z :是否同时具有gzip的属性，即是否需要用gzip压缩</li>
+<li>-j :是否同时具有bz2的属性，即是否需要用bzip2压缩（记不住的就是它）</li>
+<li>-v :压缩过程中显示文件，这个常用，呵基本上我现在每次解压都会看一下里面的文件</li>
+<li>-f :使用文件名，之后立即加文件名，不能再加别的参数</li>
+<li>-p :使用原文件的原来属性（属性不会根据用户而变），这个从来没用过。。</li>
+<li>-P :可以使用绝对路径来压缩</li>
+<li>-N :比后面接的日期（yyyy/mm/dd)还要新的才会被打包进新建的文件中</li>
+<li>–exclude FILE :在压缩的过程中，不要将FILE打包</li>
+</ul>
+<p>举个栗子:</p>
+<p>压缩成gzip文件(启用gzip，建立，查看文件，使用文件名)：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zcvf <span class="keyword">file</span>.tar.gz <span class="keyword">file</span></div></pre></td></tr></table></figure>
+
+<p>将gzip文件解压(启用gzip，解压缩，查看文件，使用文件名)：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zxvf <span class="keyword">file</span>.tar.gz</div></pre></td></tr></table></figure>
+
+<p>压缩为bz2文件(bz2，建立，查看文件，指定文件名)：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -jcvf <span class="keyword">file</span>.tar.bz2 <span class="keyword">file</span></div></pre></td></tr></table></figure>
+
+<p>将bz2文件解压(bz2，解压缩，查看文件，指定文件名)：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -jxvf <span class="keyword">file</span>.tar.bz2</div></pre></td></tr></table></figure>
+
+<p>如果不想执行压缩只需要把z或者j这个参数去掉就行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tar -cvf <span class="keyword">file</span>.tar <span class="keyword">shell</span></div><div class="line">tar -xvf <span class="keyword">file</span>.tar</div></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a href="http://www.wylyeak.org/2012/07/30/shell-tar/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../../../../2011/12/04/garbled-in-javaweb" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java Web中 Url中传递中文参数乱码的处理</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="shell-tar" data-title="Tar 压缩 解压缩 打包 命令" data-url="http://www.wylyeak.org"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"wylyeak"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2014 Wyl秦吉
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="../../../../fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="../../../../fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+  <script src="../../../../js/main.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>
