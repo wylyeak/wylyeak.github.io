@@ -4,7 +4,7 @@
   <subtitle><![CDATA[技术，成长！]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.wylyeak.org/"/>
-  <updated>2014-09-21T15:13:23.545Z</updated>
+  <updated>2014-09-22T13:29:36.875Z</updated>
   <id>http://www.wylyeak.org/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://www.wylyeak.org/2012/07/30/shell-tar/"/>
     <id>http://www.wylyeak.org/2012/07/30/shell-tar/</id>
     <published>2012-07-29T16:27:39.000Z</published>
-    <updated>2014-09-21T14:57:57.000Z</updated>
+    <updated>2014-09-22T13:15:56.000Z</updated>
     <content type="html"><![CDATA[<p>tar 是linux里面经常需要使用的命令，归档，压缩，解压缩的功能，其参数如下<br>tar [-cxtzjvfpPN] 文件与目录</p>
 <p>参数说明：<br><a id="more"></a></p>
 <ul>
@@ -79,7 +79,7 @@
     <link href="http://www.wylyeak.org/2011/12/04/garbled-in-javaweb/"/>
     <id>http://www.wylyeak.org/2011/12/04/garbled-in-javaweb/</id>
     <published>2011-12-04T06:06:51.000Z</published>
-    <updated>2014-09-21T14:54:06.000Z</updated>
+    <updated>2014-09-22T13:15:48.000Z</updated>
     <content type="html"><![CDATA[<p>在使用tomcat做容器的时候,tomcat默认的字符集是iso-8859-1,所以在使用的时候会造成中文的乱码的问题;</p>
 <p>一般的POST请求,通过struts 或者 过滤器 配置下 就能解决.</p>
 <p>超链接中如果传递参数为中文,就会出现乱码的情况,所以采用以下方法可以解决之:</p>

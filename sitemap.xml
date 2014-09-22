@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wylyeak.org/404.html</loc>
+    <lastmod>2014-09-22T13:28:41.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.wylyeak.org/2012/07/30/shell-tar/</loc>
-    <lastmod>2014-09-21T14:57:57.000Z</lastmod>
+    <lastmod>2014-09-22T13:15:56.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://www.wylyeak.org/2011/12/04/garbled-in-javaweb/</loc>
-    <lastmod>2014-09-21T14:54:06.000Z</lastmod>
+    <lastmod>2014-09-22T13:15:48.000Z</lastmod>
   </url>
   
 </urlset>
