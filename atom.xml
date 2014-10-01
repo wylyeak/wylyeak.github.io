@@ -4,7 +4,7 @@
   <subtitle><![CDATA[技术，成长！]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.wylyeak.org/"/>
-  <updated>2014-09-22T15:48:00.954Z</updated>
+  <updated>2014-10-01T08:02:48.842Z</updated>
   <id>http://www.wylyeak.org/</id>
   
   <author>
@@ -13,6 +13,43 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Ubuntu降级Svn到1.6]]></title>
+    <link href="http://www.wylyeak.org/2014/10/01/ubuntu-downgrade-svn/"/>
+    <id>http://www.wylyeak.org/2014/10/01/ubuntu-downgrade-svn/</id>
+    <published>2014-10-01T07:40:00.000Z</published>
+    <updated>2014-10-01T07:40:00.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="背景">背景</h2>
+<p>服务器subversion版本是1.6，本地SVN客户端1.8，正常的命令行下使用完全没有任何的问题。但是在IDEA中使用的时候发现每次提交代码之后就会有个错误提示，但是实际上代码已经正确提交到远程服务器。每次报错还是很恶心的，所以决定SVN降级来解决这个问题。</p>
+<a id="more"></a>
+
+<h2 id="解决方案">解决方案</h2>
+<p>在网上搜到解决办法：<a href="http://askubuntu.com/questions/205342/how-do-i-downgrade-to-subversion-1-6" target="_blank" rel="external">原文链接</a><br>这里总结解决步骤如下：</p>
+<ol>
+<li>卸载本地SVN客户端</li>
+<li>完全替换APT源为包含1.6版本的源</li>
+<li>安装SVN</li>
+<li>锁定SVN软件，避免升级</li>
+<li>恢复APT源</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"># /etc/apt/sources.<span class="keyword">list</span></div><div class="line"># 卸载</div><div class="line">sudo apt-<span class="built_in">get</span> <span class="built_in">remove</span> subversion</div><div class="line"># 备份</div><div class="line">sudo <span class="keyword">cp</span> /etc/apt/sources.<span class="keyword">list</span> /etc/apt/sources.<span class="keyword">list</span>.bak</div><div class="line"># 替换源列表</div><div class="line">sudo <span class="keyword">echo</span> <span class="string">"deb http://extras.ubuntu.com/ubuntu precise main"</span> &gt; /etc/apt/sources.<span class="keyword">list</span></div><div class="line">sudo <span class="keyword">echo</span> <span class="string">"deb http://us.archive.ubuntu.com/ubuntu/ precise main universe restricted multiverse"</span> &gt;&gt; /etc/apt/sources.<span class="keyword">list</span></div><div class="line"># 安装</div><div class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></div><div class="line">sudo apt-<span class="built_in">get</span> install subversion</div><div class="line"># 锁定</div><div class="line"><span class="keyword">echo</span> subversion hold | sudo dpkg --<span class="keyword">set</span>-selections</div><div class="line"># 解除锁定 <span class="keyword">echo</span> subversion install | sudo dpkg --<span class="keyword">set</span>-selections</div><div class="line"># 恢复</div><div class="line">sudo <span class="keyword">cp</span> /etc/apt/sources.<span class="keyword">list</span>.bak /etc/apt/sources.<span class="keyword">list</span></div><div class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></div></pre></td></tr></table></figure>
+
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="背景">背景</h2>
+<p>服务器subversion版本是1.6，本地SVN客户端1.8，正常的命令行下使用完全没有任何的问题。但是在IDEA中使用的时候发现每次提交代码之后就会有个错误提示，但是实际上代码已经正确提交到远程服务器。每次报错还是很恶心的，所以决定SVN降级来解决这个问题。</p>
+]]>
+    
+    </summary>
+    
+      <category term="ubuntu" scheme="http://www.wylyeak.org/tags/ubuntu/"/>
+    
+      <category term="svn" scheme="http://www.wylyeak.org/tags/svn/"/>
+    
+      <category term="ubuntu" scheme="http://www.wylyeak.org/categories/ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Tar 压缩 解压缩 打包 命令]]></title>

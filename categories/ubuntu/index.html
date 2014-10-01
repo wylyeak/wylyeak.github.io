@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: url | Wyl秦吉的博客</title>
+  <title>Category: ubuntu | Wyl秦吉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="记录点滴">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Wyl秦吉的博客">
-<meta property="og:url" content="http://www.wylyeak.org/tags/url/">
+<meta property="og:url" content="http://www.wylyeak.org/categories/ubuntu/">
 <meta property="og:site_name" content="Wyl秦吉的博客">
 <meta property="og:description" content="记录点滴">
 <meta name="twitter:card" content="summary">
@@ -80,7 +80,7 @@
 			
 			<section class="second-part">
 				<div class="widget tagcloud">
-					<a href="../blog" style="font-size: 10.00px;">blog</a><a href="../hexo" style="font-size: 10.00px;">hexo</a><a href="../javaweb" style="font-size: 20.00px;">javaweb</a><a href="../linux" style="font-size: 20.00px;">linux</a><a href="../markdown" style="font-size: 10.00px;">markdown</a><a href="../shell" style="font-size: 20.00px;">shell</a><a href="../svn" style="font-size: 20.00px;">svn</a><a href="../tar" style="font-size: 20.00px;">tar</a><a href="../ubuntu" style="font-size: 20.00px;">ubuntu</a><a href="" style="font-size: 20.00px;">url</a><a href="../乱码" style="font-size: 20.00px;">乱码</a><a href="../压缩" style="font-size: 20.00px;">压缩</a><a href="../命令" style="font-size: 20.00px;">命令</a><a href="../打包" style="font-size: 20.00px;">打包</a><a href="../解压缩" style="font-size: 20.00px;">解压缩</a><a href="../超链接" style="font-size: 20.00px;">超链接</a>
+					<a href="../../tags/blog" style="font-size: 10.00px;">blog</a><a href="../../tags/hexo" style="font-size: 10.00px;">hexo</a><a href="../../tags/javaweb" style="font-size: 20.00px;">javaweb</a><a href="../../tags/linux" style="font-size: 20.00px;">linux</a><a href="../../tags/markdown" style="font-size: 10.00px;">markdown</a><a href="../../tags/shell" style="font-size: 20.00px;">shell</a><a href="../../tags/svn" style="font-size: 20.00px;">svn</a><a href="../../tags/tar" style="font-size: 20.00px;">tar</a><a href="../../tags/ubuntu" style="font-size: 20.00px;">ubuntu</a><a href="../../tags/url" style="font-size: 20.00px;">url</a><a href="../../tags/乱码" style="font-size: 20.00px;">乱码</a><a href="../../tags/压缩" style="font-size: 20.00px;">压缩</a><a href="../../tags/命令" style="font-size: 20.00px;">命令</a><a href="../../tags/打包" style="font-size: 20.00px;">打包</a><a href="../../tags/解压缩" style="font-size: 20.00px;">解压缩</a><a href="../../tags/超链接" style="font-size: 20.00px;">超链接</a>
 				</div>
 			</section>
 			
@@ -129,15 +129,19 @@
 </nav>
       
   
-    <article id="post-garbled-in-javaweb" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ubuntu-downgrade-svn" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="../../2011/12/04/garbled-in-javaweb" class="article-date">
-  	<time datetime="2011-12-04T06:06:51.000Z" itemprop="datePublished">12月 4 2011</time>
+      <a href="../../2014/10/01/ubuntu-downgrade-svn" class="article-date">
+  	<time datetime="2014-10-01T07:40:00.000Z" itemprop="datePublished">10月 1 2014</time>
 </a>
       
+  <div class="article-category">
+    <a class="article-category-link" href="">ubuntu</a>
+  </div>
+
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../javaweb">javaweb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="">url</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../乱码">乱码</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../超链接">超链接</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/svn">svn</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../tags/ubuntu">ubuntu</a></li></ul>
 
     </div>
   
@@ -147,7 +151,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="../../2011/12/04/garbled-in-javaweb">Java Web中 Url中传递中文参数乱码的处理</a>
+      <a class="article-title" href="../../2014/10/01/ubuntu-downgrade-svn">Ubuntu降级Svn到1.6</a>
     </h1>
   
 
@@ -155,20 +159,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在使用tomcat做容器的时候,tomcat默认的字符集是iso-8859-1,所以在使用的时候会造成中文的乱码的问题;</p>
-<p>一般的POST请求,通过struts 或者 过滤器 配置下 就能解决.</p>
-<p>超链接中如果传递参数为中文,就会出现乱码的情况,所以采用以下方法可以解决之:</p>
+        <h2 id="背景">背景</h2>
+<p>服务器subversion版本是1.6，本地SVN客户端1.8，正常的命令行下使用完全没有任何的问题。但是在IDEA中使用的时候发现每次提交代码之后就会有个错误提示，但是实际上代码已经正确提交到远程服务器。每次报错还是很恶心的，所以决定SVN降级来解决这个问题。</p>
 
         
           <p class="article-more-link">
-            <a href="../../2011/12/04/garbled-in-javaweb#more">more >></a>
+            <a href="../../2014/10/01/ubuntu-downgrade-svn#more">more >></a>
           </p>
         
       
     </div>
     <footer class="article-footer">
       
-        <a href="http://www.wylyeak.org/2011/12/04/garbled-in-javaweb/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://www.wylyeak.org/2014/10/01/ubuntu-downgrade-svn/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>

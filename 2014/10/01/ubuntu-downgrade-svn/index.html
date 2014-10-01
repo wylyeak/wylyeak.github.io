@@ -3,23 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Java Web中 Url中传递中文参数乱码的处理 | Wyl秦吉的博客</title>
+  <title>Ubuntu降级Svn到1.6 | Wyl秦吉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在使用tomcat做容器的时候,tomcat默认的字符集是iso-8859-1,所以在使用的时候会造成中文的乱码的问题;
-一般的POST请求,通过struts 或者 过滤器 配置下 就能解决.
-超链接中如果传递参数为中文,就会出现乱码的情况,所以采用以下方法可以解决之:">
+  <meta name="description" content="背景
+服务器subversion版本是1.6，本地SVN客户端1.8，正常的命令行下使用完全没有任何的问题。但是在IDEA中使用的时候发现每次提交代码之后就会有个错误提示，但是实际上代码已经正确提交到远程服务器。每次报错还是很恶心的，所以决定SVN降级来解决这个问题。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java Web中 Url中传递中文参数乱码的处理">
-<meta property="og:url" content="http://www.wylyeak.org/2011/12/04/garbled-in-javaweb/">
+<meta property="og:title" content="Ubuntu降级Svn到1.6">
+<meta property="og:url" content="http://www.wylyeak.org/2014/10/01/ubuntu-downgrade-svn/">
 <meta property="og:site_name" content="Wyl秦吉的博客">
-<meta property="og:description" content="在使用tomcat做容器的时候,tomcat默认的字符集是iso-8859-1,所以在使用的时候会造成中文的乱码的问题;
-一般的POST请求,通过struts 或者 过滤器 配置下 就能解决.
-超链接中如果传递参数为中文,就会出现乱码的情况,所以采用以下方法可以解决之:">
+<meta property="og:description" content="背景
+服务器subversion版本是1.6，本地SVN客户端1.8，正常的命令行下使用完全没有任何的问题。但是在IDEA中使用的时候发现每次提交代码之后就会有个错误提示，但是实际上代码已经正确提交到远程服务器。每次报错还是很恶心的，所以决定SVN降级来解决这个问题。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java Web中 Url中传递中文参数乱码的处理">
-<meta name="twitter:description" content="在使用tomcat做容器的时候,tomcat默认的字符集是iso-8859-1,所以在使用的时候会造成中文的乱码的问题;
-一般的POST请求,通过struts 或者 过滤器 配置下 就能解决.
-超链接中如果传递参数为中文,就会出现乱码的情况,所以采用以下方法可以解决之:">
+<meta name="twitter:title" content="Ubuntu降级Svn到1.6">
+<meta name="twitter:description" content="背景
+服务器subversion版本是1.6，本地SVN客户端1.8，正常的命令行下使用完全没有任何的问题。但是在IDEA中使用的时候发现每次提交代码之后就会有个错误提示，但是实际上代码已经正确提交到远程服务器。每次报错还是很恶心的，所以决定SVN降级来解决这个问题。">
 
   
     <link rel="alternative" href="/atom.xml" title="Wyl秦吉的博客" type="application/atom+xml">
@@ -133,15 +130,19 @@
 		</header>				
 	</div>
 </nav>
-      <article id="post-garbled-in-javaweb" class="article article-type-post" itemscope itemprop="blogPost">
+      <article id="post-ubuntu-downgrade-svn" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="" class="article-date">
-  	<time datetime="2011-12-04T06:06:51.000Z" itemprop="datePublished">12月 4 2011</time>
+  	<time datetime="2014-10-01T07:40:00.000Z" itemprop="datePublished">10月 1 2014</time>
 </a>
       
+  <div class="article-category">
+    <a class="article-category-link" href="../../../../categories/ubuntu">ubuntu</a>
+  </div>
+
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/javaweb">javaweb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/url">url</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/乱码">乱码</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/超链接">超链接</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/svn">svn</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/ubuntu">ubuntu</a></li></ul>
 
     </div>
   
@@ -151,7 +152,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Java Web中 Url中传递中文参数乱码的处理
+      Ubuntu降级Svn到1.6
     </h1>
   
 
@@ -159,29 +160,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在使用tomcat做容器的时候,tomcat默认的字符集是iso-8859-1,所以在使用的时候会造成中文的乱码的问题;</p>
-<p>一般的POST请求,通过struts 或者 过滤器 配置下 就能解决.</p>
-<p>超链接中如果传递参数为中文,就会出现乱码的情况,所以采用以下方法可以解决之:</p>
+        <h2 id="背景">背景</h2>
+<p>服务器subversion版本是1.6，本地SVN客户端1.8，正常的命令行下使用完全没有任何的问题。但是在IDEA中使用的时候发现每次提交代码之后就会有个错误提示，但是实际上代码已经正确提交到远程服务器。每次报错还是很恶心的，所以决定SVN降级来解决这个问题。</p>
 <a id="more"></a>
 
-<p>网上的一般方法为:</p>
+<h2 id="解决方案">解决方案</h2>
+<p>在网上搜到解决办法：<a href="http://askubuntu.com/questions/205342/how-do-i-downgrade-to-subversion-1-6" target="_blank" rel="external">原文链接</a><br>这里总结解决步骤如下：</p>
 <ol>
-<li>修改tomcat默认字符集(不推荐,一般托管的服务器是没法接触到tomcat文件的)</li>
-<li>在中文连接请求之前js对中文执行encodeURI或者encodeURIComponent方法</li>
-<li>编码重组</li>
+<li>卸载本地SVN客户端</li>
+<li>完全替换APT源为包含1.6版本的源</li>
+<li>安装SVN</li>
+<li>锁定SVN软件，避免升级</li>
+<li>恢复APT源</li>
 </ol>
-<p>页面端直接输出中文的链接</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"sevlet?test=中文"</span>&gt;</span>test<span class="tag">&lt;/<span class="title">a</span>&gt;</span></div></pre></td></tr></table></figure>
-
-<p>页面中该是怎样就怎样<br>在后台对字符编码测试,如果是iso-8859-1则进行编码重组.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//如果字符串是采用iso-889-1编码的话,则下个判断会返回true</span></div><div class="line"><span class="keyword">if</span>(Charset.forName(<span class="string">"ISO-8859-1"</span>).newEncoder().canEncode(key)){</div><div class="line">   <span class="keyword">try</span> {</div><div class="line">       key = <span class="keyword">new</span> String(key.getBytes(<span class="string">"ISO-8859-1"</span>),<span class="string">"gbk"</span>);</div><div class="line">   } <span class="keyword">catch</span> (UnsupportedEncodingException e) {</div><div class="line">       e.printStackTrace();</div><div class="line">   }</div><div class="line">}</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"># /etc/apt/sources.<span class="keyword">list</span></div><div class="line"># 卸载</div><div class="line">sudo apt-<span class="built_in">get</span> <span class="built_in">remove</span> subversion</div><div class="line"># 备份</div><div class="line">sudo <span class="keyword">cp</span> /etc/apt/sources.<span class="keyword">list</span> /etc/apt/sources.<span class="keyword">list</span>.bak</div><div class="line"># 替换源列表</div><div class="line">sudo <span class="keyword">echo</span> <span class="string">"deb http://extras.ubuntu.com/ubuntu precise main"</span> &gt; /etc/apt/sources.<span class="keyword">list</span></div><div class="line">sudo <span class="keyword">echo</span> <span class="string">"deb http://us.archive.ubuntu.com/ubuntu/ precise main universe restricted multiverse"</span> &gt;&gt; /etc/apt/sources.<span class="keyword">list</span></div><div class="line"># 安装</div><div class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></div><div class="line">sudo apt-<span class="built_in">get</span> install subversion</div><div class="line"># 锁定</div><div class="line"><span class="keyword">echo</span> subversion hold | sudo dpkg --<span class="keyword">set</span>-selections</div><div class="line"># 解除锁定 <span class="keyword">echo</span> subversion install | sudo dpkg --<span class="keyword">set</span>-selections</div><div class="line"># 恢复</div><div class="line">sudo <span class="keyword">cp</span> /etc/apt/sources.<span class="keyword">list</span>.bak /etc/apt/sources.<span class="keyword">list</span></div><div class="line">sudo apt-<span class="built_in">get</span> <span class="keyword">update</span></div></pre></td></tr></table></figure>
 
 
       
     </div>
     <footer class="article-footer">
       
-        <a href="http://www.wylyeak.org/2011/12/04/garbled-in-javaweb/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://www.wylyeak.org/2014/10/01/ubuntu-downgrade-svn/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -190,15 +189,11 @@
     
 <nav id="article-nav">
   
-    <a href="../../../../2012/07/30/shell-tar" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Tar 压缩 解压缩 打包 命令
-        
-      </div>
-    </a>
   
+    <a href="../../../../2012/07/30/shell-tar" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Tar 压缩 解压缩 打包 命令</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -225,7 +220,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="garbled-in-javaweb" data-title="Java Web中 Url中传递中文参数乱码的处理" data-url="http://www.wylyeak.org"></div>
+	<div class="ds-thread" data-thread-key="ubuntu-downgrade-svn" data-title="Ubuntu降级Svn到1.6" data-url="http://www.wylyeak.org"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
